@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decodificador de texto</title>
-    <link rel="stylesheet" type="text/less" href="/style/style.css" />
+    <link rel="stylesheet/less" type="text/css" href="/style/style.less" />
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
 </head>
 
 <body>
@@ -14,12 +15,16 @@
         <h1>Decodificador de textos</h1>
     </header>
 
-    <main>
+    <main class="main__container">
         <section class="main__container-text">
-            <input type="text" class="main__container-text-input" placeholder="Digite seu texto">
+            <input type="text" class="main__container-text-input" placeholder="Digite seu texto aqui">
+            <button>Criptografar</button>
+            <button>Descriptografar</button>
         </section>
+
         <section class="main__container-results">
-            <img src="https://placehold.co/300" alt="">
+            <img src="https://opendoodles.s3-us-west-1.amazonaws.com/doggie.gif" width="300"
+                alt="Gif ilustrado de um homem acariciando um cachorro">
             <h3 class="main__container-results-highlight">
                 Nenhuma mensagem encontrada
             </h3>
