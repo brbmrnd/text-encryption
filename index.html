@@ -5,26 +5,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Decodificador de texto</title>
+    <title>Encriptador de textos</title>
     <link rel="stylesheet/less" type="text/css" href="/style/style.less" />
     <script src="https://cdn.jsdelivr.net/npm/less"></script>
+    <script src="https://kit.fontawesome.com/e485b05067.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
     <header>
-        <h1>Decodificador de textos</h1>
+        <i class="fa-solid fa-laptop-code fa-xl"></i>
+        <h1 class="header__title">encriptador de textos</h1>
     </header>
 
     <main class="main__container">
         <section class="main__container-text">
-            <input type="text" class="main__container-text-input" placeholder="Digite seu texto aqui">
-            <button>Criptografar</button>
-            <button>Descriptografar</button>
+            <textarea class="main__container-text-input" placeholder="Digite seu texto aqui"></textarea>
+            <div class="main__container__buttons">
+                <button class="criptbutton">Criptografar</button>
+                <button class="uncriptbutton">Descriptografar</button>
+            </div>
         </section>
 
         <section class="main__container-results">
-            <img src="https://opendoodles.s3-us-west-1.amazonaws.com/doggie.gif" width="300"
-                alt="Gif ilustrado de um homem acariciando um cachorro">
+            <img class="main__container-results__img" src="/assets/Cat throwing a vase-bro.svg"
+                width="300" alt="Gif ilustrado de um homem acariciando um cachorro">
             <h3 class="main__container-results-highlight">
                 Nenhuma mensagem encontrada
             </h3>
@@ -36,10 +41,7 @@
     </main>
 
     <footer>
-        Projeto autoral desenvolvido durante o curso do programa <a
-            href="https://www.oracle.com/br/education/oracle-next-education/" target="_blank"> Oracle Next Education</a>
-        em parceria com <a href="https://www.alura.com.br" target="_blank"> Alura</a>. <br>
-        &copy; Bárbara Miranda, 2024.
+        &copy; Bárbara Miranda, 2024 | illustration by <a href="https://storyset.com/home" target="_blank"> Storyset</a>
     </footer>
 
 </body>
