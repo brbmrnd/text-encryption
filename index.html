@@ -13,30 +13,32 @@
 </head>
 
 <body>
-    <header>
-        <i class="fa-solid fa-laptop-code fa-xl"></i>
-        <h1 class="header__title">encriptador de textos</h1>
-    </header>
 
     <main class="main__container">
         <section class="main__container-text">
-            <textarea class="main__container-text-input" placeholder="Digite seu texto aqui"></textarea>
+            <textarea id="inputText" class="main__container-text-input" placeholder="Digite seu texto aqui"></textarea>
+            <div class="main__container-obs">
+                <h6></h6>
+            </div>
             <div class="main__container__buttons">
-                <button class="criptbutton">Criptografar</button>
-                <button class="uncriptbutton">Descriptografar</button>
+                <button class="cript-button">Criptografar</button>
+                <button class="descript-button">Descriptografar</button>
             </div>
         </section>
 
         <section class="main__container-results">
-            <img class="main__container-results__img" src="/assets/Cat throwing a vase-bro.svg"
-                width="300" alt="Gif ilustrado de um homem acariciando um cachorro">
-            <h3 class="main__container-results-highlight">
-                Nenhuma mensagem encontrada
-            </h3>
-            <p class="main__container-results-message">
-                Digite um texto que você deseja criptografar ou descriptografar.
-            </p>
 
+            <div id="container_message" class="main__container-message">
+                <img id="image" class="main__container-message-img" src="/assets/Cat throwing a vase-bro.svg"
+                    width="250" alt="Ilustração em tons de roxo de um gato derrubando um vaso de plantas">
+                <h3 class="main__container-message-highlight">
+                    Nenhuma mensagem encontrada
+                </h3>
+                <p class="main__container-message-shortmessage">
+                    Digite um texto que você deseja criptografar ou descriptografar.
+                </p>
+            </div>
+            <button class="copy-button">Copiar</button>
         </section>
     </main>
 
@@ -45,5 +47,6 @@
     </footer>
 
 </body>
+<script src="app.js"></script>
 
 </html>

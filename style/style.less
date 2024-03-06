@@ -17,12 +17,18 @@
     font-family: @mainfont;
     font-size: 1rem;
     cursor: pointer;
+
+    &:hover {
+        transition: all 1s;
+        background-color: @maincolor;
+    }
+
 }
 
 
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -32,90 +38,64 @@ body {
     background-color: @bgcolor;
     color: @textcolor;
 
-    header {
-        display: flex;
-        padding: 2%;
-        align-items: center;
-        justify-content: center;
-        gap: 30px;
-
-        .fa-solid {
-            color: @maincolor;
-        }
-
-        .header__title {
-            font-family: @titlefont;
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: @maincolor;
-        }
-
-    }
 
     .main__container {
-        height: 75%;
+        height: 90%;
         display: flex;
-        padding: 0px 50px 0px 150px;
-        gap: 8%;
+        padding: 2% 2% 2% 15%;
+        gap: 80px;
+        align-items: flex-end;
 
         .main__container-text {
             display: flex;
             flex-direction: column;
-            width: 60%;
-            gap: 20px;
+            height: 90%;
+            width: 700px;
 
             .main__container-text-input {
                 width: 100%;
-                height: 100%;
+                height: 90%;
+                padding-top: 10%;
                 resize: none;
-                padding: 25px;
-                border-radius: 32px;
                 border: none;
-                background-color: white;
+                background-color: transparent;
                 font-family: @mainfont;
                 font-size: 1.2rem;
                 color: @maincolor;
+                text-transform: lowercase;
                 text-align: start;
-
-                &:focus {
-                    outline: none;
-                }
 
                 &::placeholder {
                     color: lightgrey;
                 }
 
-                &:focus::placeholder {
-                    color: transparent;
+                &:focus {
+                    outline: none;
+
+                    &::placeholder {
+                        color: transparent;
+                    }
                 }
             }
 
             .main__container__buttons {
                 display: flex;
-                gap: 40px;
-                justify-content: center;
+                justify-content: space-between;
 
-                .criptbutton {
+                .cript-button {
                     .buttonstyle();
                     color: white;
                     background-color: @spotcolor;
-
-                    &:hover {
-                        transition: all 1s;
-                        background-color: @maincolor;
-                    }
                 }
 
-                .uncriptbutton {
+                .descript-button {
                     .buttonstyle();
                     color: @spotcolor;
                     background-color: white;
                     border: 1px solid @spotcolor;
 
                     &:hover {
-                        transition: all 1s;
                         color: white;
-                        background-color: @maincolor;
                         border-color: @maincolor;
                     }
                 }
@@ -123,34 +103,56 @@ body {
         }
 
         .main__container-results {
-            width: 25%;
+            width: 300px;
+            height: 100%;
             display: flex;
             flex-direction: column;
-            padding: 1%;
-            gap: 5px;
             align-items: center;
-            justify-content: center;
+            justify-content: space-around;
             border-radius: 32px;
             background-color: white;
 
-            .main__container-results-highlight {
-                font-family: @mainfont;
-                font-size: 1rem;
-                text-align: center;
+            .main__container-message {
+                display: flex;
+                flex-direction: column;
+                width: 250px;
+                height: 80%;
+                justify-content: center;
+                gap: 10px;
 
+                .main__container-message-highlight {
+                    font-family: @mainfont;
+                    font-size: 1rem;
+                    text-align: center;
+
+                }
+
+                .main__container-message-shortmessage {
+                    font-family: @mainfont;
+                    font-size: 0.8rem;
+                    text-align: center;
+                }
             }
 
-            .main__container-results-message {
-                font-family: @mainfont;
-                font-size: 0.9rem;
-                text-align: center;
+
+            .copy-button {
+                .buttonstyle();
+                width: 250px;
+                color: @spotcolor;
+                background-color: white;
+                border: 1px solid @spotcolor;
+
+                &:hover {
+                    color: white;
+                    border-color: @maincolor;
+                }
             }
         }
     }
 
     footer {
 
-        padding: 5% 0 0 0;
+        padding: 0.5rem;
         text-align: center;
         font-family: @mainfont;
         font-size: 0.7rem;
