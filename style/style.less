@@ -2,27 +2,39 @@
 
 
 @bgcolor: rgb(241, 233, 255);
-@textcolor: rgb(130, 130, 130);
 @maincolor: rgb(125, 74, 176);
 @spotcolor: rgb(246, 128, 124);
 
 @titlefont: "Major Mono Display", monospace;
 @mainfont: "Red Hat Display", sans-serif;
+@textcolor: rgb(173, 173, 173);
 
-.buttonstyle() {
+.buttonstyle(@fontcolor; @color) {
+    color: @fontcolor;
+    background-color: @color;
     padding: 15px;
-    width: 328px;
-    border: none;
+    border: 1px solid @spotcolor;
     border-radius: 24px;
     font-family: @mainfont;
     font-size: 1rem;
     cursor: pointer;
+}
 
+.hoverButton {
     &:hover {
         transition: all 1s;
+        color: white;
         background-color: @maincolor;
+        border: none;
     }
+}
 
+.disableButton {
+    &:disabled {
+        .buttonstyle(@textcolor; white);
+        border: 1px solid @textcolor;
+        cursor: default;
+    }
 }
 
 
@@ -61,12 +73,12 @@ body {
                 background-color: transparent;
                 font-family: @mainfont;
                 font-size: 1.2rem;
-                color: @maincolor;
+                color: @spotcolor;
                 text-transform: lowercase;
                 text-align: start;
 
                 &::placeholder {
-                    color: lightgrey;
+                    color: @textcolor;
                 }
 
                 &:focus {
@@ -82,22 +94,26 @@ body {
                 display: flex;
                 justify-content: space-between;
 
-                .cript-button {
-                    .buttonstyle();
-                    color: white;
-                    background-color: @spotcolor;
+                .encrypt-button {
+                    width: 328px;
+
+                    &:enabled {
+                        .buttonstyle(@spotcolor; white);
+                        .hoverButton();
+                    }
+
+                    .disableButton();
                 }
 
-                .descript-button {
-                    .buttonstyle();
-                    color: @spotcolor;
-                    background-color: white;
-                    border: 1px solid @spotcolor;
+                .decrypt-button {
+                    width: 328px;
 
-                    &:hover {
-                        color: white;
-                        border-color: @maincolor;
+                    &:enabled {
+                        .buttonstyle(@spotcolor; white);
+                        .hoverButton();
                     }
+
+                    .disableButton();
                 }
             }
         }
@@ -111,6 +127,8 @@ body {
             justify-content: space-around;
             border-radius: 32px;
             background-color: white;
+            font-family: @mainfont;
+            color: @maincolor;
 
             .main__container-message {
                 display: flex;
@@ -121,31 +139,22 @@ body {
                 gap: 10px;
 
                 .main__container-message-highlight {
-                    font-family: @mainfont;
+                    
                     font-size: 1rem;
                     text-align: center;
 
                 }
 
                 .main__container-message-shortmessage {
-                    font-family: @mainfont;
+                    color: @textcolor;
                     font-size: 0.8rem;
                     text-align: center;
                 }
             }
 
-
             .copy-button {
-                .buttonstyle();
                 width: 250px;
-                color: @spotcolor;
-                background-color: white;
-                border: 1px solid @spotcolor;
-
-                &:hover {
-                    color: white;
-                    border-color: @maincolor;
-                }
+                .buttonstyle(@spotcolor; white);
             }
         }
     }
