@@ -37,6 +37,8 @@ function inputValidation() {
 function encrypt() {
     let inputText = textarea.value;
     copyButton.removeAttribute('hidden');
+    copyButton.innerHTML = 'Copiar';
+
 
     if (inputText.length !== 0) {
         let encryptedText = inputText
@@ -55,6 +57,7 @@ function encrypt() {
 function decrypt() {
     let inputText = textarea.value;
     copyButton.removeAttribute('hidden');
+    copyButton.innerHTML = 'Copiar';
 
     if (inputText.length !== 0) {
         let decryptedText = inputText
