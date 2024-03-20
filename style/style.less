@@ -7,7 +7,7 @@
 
 @titlefont: "Major Mono Display", monospace;
 @mainfont: "Red Hat Display", sans-serif;
-@textcolor: rgb(173, 173, 173);
+@textcolor: rgb(138, 138, 138);
 
 .buttonstyle(@fontcolor; @color) {
     color: @fontcolor;
@@ -87,6 +87,21 @@ body {
                     &::placeholder {
                         color: transparent;
                     }
+                }
+            }
+
+            .main__container-obs{
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                padding: 10px;
+
+                h6{
+                font-family: @mainfont;
+                }
+
+                .fa-solid{
+                    color: @textcolor;
                 }
             }
 

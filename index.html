@@ -8,6 +8,7 @@
     <title>Encriptador de textos</title>
     <link rel="stylesheet/less" type="text/css" href="style/style.less" />
     <script src="https://cdn.jsdelivr.net/npm/less"></script>
+    <script src="https://kit.fontawesome.com/e485b05067.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -17,8 +18,10 @@
         <section class="main__container-text">
             <textarea id="inputText" class="main__container-text-input" oninput="inputValidation()" placeholder="Digite seu texto aqui" ></textarea>
             <div class="main__container-obs">
-                <h6></h6>
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <h6>Apenas letras minúsculas e sem acento.</h6>
             </div>
+
             <div class="main__container__buttons">
                 <button type="submit" onclick="encrypt()" id="encrypt-button" class="encrypt-button" disabled>Criptografar</button>
                 <button type="submit" onclick="decrypt()" id="decrypt-button" class="decrypt-button"disabled>Descriptografar</button>
